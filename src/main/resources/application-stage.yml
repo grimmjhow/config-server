@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: app-enviroment-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/grimmjhow/app-enviroment
+          skipSslValidation: true
+          default-label: stage
+
+server:
+  port: 8888
+  servlet:
+    application-display-name: ${spring.application.name}
